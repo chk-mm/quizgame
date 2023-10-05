@@ -17,7 +17,7 @@ class QuizBrain:
 
     def ask_question(self):
         answer = input(f'{self.question_number+1}.{self.questions[self.question_number].text}Your answer?(True/False):')
-        if answer == self.questions[self.question_number].answer:
+        if answer.lower() == self.questions[self.question_number].answer.lower():
             print('You got it right!')
             self.score += 1
         else:
